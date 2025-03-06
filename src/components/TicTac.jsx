@@ -16,7 +16,7 @@ const TicTac = () => {
       return 0;
     }
     if (count % 2 === 0) {
-      e.target.innerHTML = `<img src='${cross_icon}' class = "w-15 h-15 m-auto"/>`;
+      e.target.innerHTML = `<img src='${cross_icon}' class = "w-10 h-10 m-auto"/>`;
 
       data[num] = "x";
 
@@ -24,7 +24,7 @@ const TicTac = () => {
 
       checkWin();
     } else {
-      e.target.innerHTML = `<img src='${cirle_icon}' class = "w-15 h-15 m-auto" />`;
+      e.target.innerHTML = `<img src='${cirle_icon}' class = "w-10 h-10 m-auto" />`;
 
       data[num] = "o";
 
@@ -56,10 +56,10 @@ const TicTac = () => {
   const won = (winner) => {
     setLock(true);
     if (winner === "x") {
-      titleRef.current.innerHTML = `CONGRATULATION : <img src='${cross_icon}' class = "w-8 h-8 ml-2 mt-2"/> WINS`;
+      titleRef.current.innerHTML = `CONGRATULATION : <img src='${cross_icon}' class = "w-8 h-8 ml-2 mt-2 mr-1"/> WINS`;
       soundRef.current.play();
     } else {
-      titleRef.current.innerHTML = `CONGRATULATION : <img src='${cirle_icon}' class = "w-8 h-8 ml-2 mt-2"/> WINS`;
+      titleRef.current.innerHTML = `CONGRATULATION : <img src='${cirle_icon}' class = "w-8 h-8 ml-2 mt-2 mr-1"/> WINS`;
       soundRef.current.play();
     }
   };
@@ -142,7 +142,7 @@ const TicTac = () => {
         </div>
       </div>
       <button
-        className="w-50 h-15 bg-[#1f3540] text-2xl text-[#26ffcb] mt-6 mb-12 rounded-full items-center uppercase cursor-pointer -tracking-[-2px] font-medium border border-[#26ffcb] shadow-md"
+        className="w-50 h-15 bg-[#1f3540] text-2xl text-[#26ffcb] mt-6 mb-12 rounded-full items-center uppercase cursor-pointer -tracking-[-2px] font-medium border border-[#26ffcb]"
         onClick={reset}
       >
         Reset
