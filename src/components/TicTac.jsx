@@ -56,10 +56,10 @@ const TicTac = () => {
   const won = (winner) => {
     setLock(true);
     if (winner === "x") {
-      titleRef.current.innerHTML = `CONGRATULATION : <img src='${cross_icon}' class = "w-8 h-8 ml-2 mt-2 mr-1"/> WINS`;
+      titleRef.current.innerHTML = `<h1 class = "flex">CONGRATULATION : <img src='${cross_icon}' class = "w-5 h-5 ml-2 mt-2 mr-1"/></h1>`;
       soundRef.current.play();
     } else {
-      titleRef.current.innerHTML = `CONGRATULATION : <img src='${cirle_icon}' class = "w-8 h-8 ml-2 mt-2 mr-1"/> WINS`;
+      titleRef.current.innerHTML = `<h1 class = "flex">CONGRATULATION : <img src='${cirle_icon}' class = "w-5 h-5 ml-2 mt-2 mr-1"/></h1>`;
       soundRef.current.play();
     }
   };
@@ -71,13 +71,13 @@ const TicTac = () => {
   return (
     <div className="container text-center">
       <h1
-        className="mt-7 text-white flex justify-center items-center font-semibold md:text-3xl sm:text-2xl lg:text-4xl"
+        className="mt-7 text-4xl text-white flex justify-center items-center font-semibold max-md:text-2xl max-md:mt-15"
         ref={titleRef}
       >
         TIC TAC GAME IN <span className="pl-4 text-[#26ffcb]">REACT</span>
       </h1>
       <audio src={winSound} ref={soundRef}></audio>
-      <div className="h-[400px] w-[564px] flex m-auto justify-center mt-2 items-center">
+      <div className="h-[400px] w-[564px] flex m-auto justify-center mt-2 items-center max-md:w-[300px] max-md:h-[200px] max-md:mt-20 max-md:mb-20">
         <div>
           <div
             className="flex h-25 w-25 bg-[#1f3540] rounded border border-[#0f1b21] cursor-pointer"
